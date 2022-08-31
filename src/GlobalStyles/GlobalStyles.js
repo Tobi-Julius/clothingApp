@@ -26,4 +26,10 @@ export const globalStyles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
   },
+  columnEnd: {
+    justifyContent: "center",
+    alignItems: "flex-end",
+    flexDirection: "row",
+
+  },
 });

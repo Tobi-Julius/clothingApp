@@ -2,16 +2,14 @@ import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { Like, Home, User, Cart } from "../Screens";
 import Colors from "../Constants/Colors";
-import { Ionicons } from "@expo/vector-icons";
-import { Entypo } from "@expo/vector-icons";
-import { Feather } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Ionicons, Entypo, Feather } from "@expo/vector-icons";
 
 const Tabs = createMaterialBottomTabNavigator();
 
 const MainBottomTabNavigator = () => {
   return (
     <Tabs.Navigator
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
       }}

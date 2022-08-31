@@ -7,6 +7,8 @@ import { globalStyles } from "../GlobalStyles";
 import { layout } from "../Utils";
 import { Ionicons } from "@expo/vector-icons";
 
+
+
 const MainStack = createSharedElementStackNavigator();
 const RootNavigation = ({ navigation }) => {
   return (
