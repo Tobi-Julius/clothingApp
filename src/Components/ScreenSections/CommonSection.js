@@ -16,7 +16,7 @@ export const CommonSection = ({ leftText }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: layout.pixelSizeVertical(10),
+    marginVertical: layout.pixelSizeVertical(8),
   },
   leftText: {
     fontSize: layout.size.h1,

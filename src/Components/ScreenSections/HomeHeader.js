@@ -22,7 +22,7 @@ export const HomeHeader = () => {
         activeOpacity={0.7}
         style={{
           backgroundColor: Colors.primaryBg,
-          padding: layout.fontPixel(10),
+          padding: layout.pixelSizeVertical(10),
           borderRadius: layout.fontPixel(7),
         }}
       >
@@ -34,6 +34,6 @@ export const HomeHeader = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: layout.pixelSizeVertical(17),
+    marginVertical: layout.pixelSizeVertical(10),
   },
 });

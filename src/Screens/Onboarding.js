@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     width: "100%",
-    height: layout.heightPixel(340),
+    height: layout.heightPixel(380),
   },
   midText: {
     fontFamily: "Nunito_700Bold",
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   skipBtn: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginVertical: layout.pixelSizeVertical(40),
+    marginVertical: layout.pixelSizeVertical(80),
   },
   skipText: {
     color: Colors.primaryBg,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   btn: {
     backgroundColor: Colors.secondaryColor,
     paddingVertical: layout.pixelSizeVertical(15),
-    paddingHorizontal: layout.pixelSizeHorizontal(28),
+    paddingHorizontal: layout.pixelSizeHorizontal(25),
     borderRadius: layout.fontPixel(15),
   },
   btnIcon: {

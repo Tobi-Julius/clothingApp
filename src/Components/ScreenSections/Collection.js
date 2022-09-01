@@ -1,7 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  View,
+  ImageBackground,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
+import { layout } from "../../Utils";
+import { globalStyles } from "../../GlobalStyles";
+import { Text } from "../common/Text";
+import { BlurView } from "expo-blur";
 
-const Collection = () => {
+export const Collection = () => {
   const data = [
     {
       id: "1",
@@ -19,13 +29,60 @@ const Collection = () => {
       uri: "https://images.unsplash.com/photo-1554871037-99938249e220?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3VtbWVyJTIwc2Vhc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800",
     },
   ];
+
   return (
     <View>
-      <Text>Collection</Text>
+      <ScrollView
+        horizontal
+        contentContainerStyle={{
+          marginVertical: layout.pixelSizeVertical(15),
+        }}
+        showsHorizontalScrollIndicator={false}
+      >
+        {data.map((item, index) => {
+          return (
+            <TouchableOpacity key={item.id} activeOpacity={0.7}>
+              <ImageBackground
+                resizeMode="cover"
+                source={{ uri: item.uri }}
+                style={[
+                  globalStyles.columnEnd,
+                  styles.image,
+                  {
+                    marginRight:
+                      data.length === index + 1
+                        ? 0
+                        : layout.pixelSizeHorizontal(20),
+                  },
+                ]}
+              >
+                <BlurView
+                  intensity={200}
+                  style={[globalStyles.rowCenter, styles.blur]}
+                >
+                  <Text textStyle={styles.text} text={item.season} />
+                </BlurView>
+              </ImageBackground>
+            </TouchableOpacity>
+          );
+        })}
+      </ScrollView>
     </View>
   );
 };
 
-export default Collection;
-
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  image: {
+    height: layout.heightPixel(210),
+    width: layout.widthPixel(150),
+    borderRadius: layout.fontPixel(15),
+  },
+  text: {
+    fontFamily: "Nunito_500Medium",
+    fontSize: layout.size.h4,
+  },
+  blur: {
+    height: "21%",
+    width: "100%",
+  },
+});
