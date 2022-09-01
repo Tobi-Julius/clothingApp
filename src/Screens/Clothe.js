@@ -13,7 +13,9 @@ export const Clothe = () => {
   return (
     <View style={globalStyles.rowCenter}>
       <SafeAreaView style={[globalStyles.rowCenter, styles.container]}>
-        <ClotheBody item={item} />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <ClotheBody item={item} />
+        </ScrollView>
       </SafeAreaView>
     </View>
   );

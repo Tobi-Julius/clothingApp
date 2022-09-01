@@ -13,7 +13,10 @@ import { globalStyles } from "../GlobalStyles";
 export const Home = () => {
   return (
     <View style={[globalStyles.rowCenter]}>
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView
+        showsVerticalScrollIndicator={false}
+        style={styles.container}
+      >
         <ScrollView>
           <HomeHeader />
           <CommonSection leftText="New Arrival" />
