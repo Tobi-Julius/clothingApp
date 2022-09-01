@@ -1,7 +1,7 @@
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { layout } from "../../Utils";
-import Colors from "../../Constants/Colors";
+import { layout } from "../../utils";
+import Colors from "../../constants/Colors";
 
 export const ClotheColor = () => {
   const [colorId, setColorId] = React.useState("1");

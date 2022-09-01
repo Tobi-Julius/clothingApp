@@ -1,9 +1,9 @@
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { globalStyles } from "../../GlobalStyles";
+import { globalStyles } from "../../globalStyles";
 import { FontAwesome, Feather } from "@expo/vector-icons";
-import { layout } from "../../Utils";
-import Colors from "../../Constants/Colors";
+import { layout } from "../../utils";
+import Colors from "../../constants/Colors";
 
 export const HomeHeader = () => {
   return (

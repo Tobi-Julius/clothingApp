@@ -1,13 +1,13 @@
 import React from "react";
 import { createSharedElementStackNavigator } from "react-navigation-shared-element";
-import { Onboarding, Clothe } from "../Screens";
+import { Onboarding, Clothe } from "../screens";
 import MainBottomTabNavigator from "./MainBottomTabNavigator";
 import { TouchableOpacity } from "react-native";
-import { globalStyles } from "../GlobalStyles";
-import { layout } from "../Utils";
+import { globalStyles } from "../globalStyles";
+import { layout } from "../utils";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import Colors from "../Constants/Colors";
+import Colors from "../constants/Colors";
 
 const MainStack = createSharedElementStackNavigator();
 

@@ -1,9 +1,9 @@
 import { ScrollView, StyleSheet, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { globalStyles } from "../GlobalStyles";
-import { layout } from "../Utils";
-import { ClotheBody } from "../Components/ScreenSections";
+import { globalStyles } from "../globalStyles";
+import { layout } from "../utils";
+import { ClotheBody } from "../components/ScreenSections";
 import { useRoute } from "@react-navigation/native";
 
 export const Clothe = () => {

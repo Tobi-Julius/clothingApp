@@ -6,9 +6,9 @@ import {
   HomeHeader,
   Arrivals,
   Collection,
-} from "../Components/ScreenSections";
-import { layout } from "../Utils";
-import { globalStyles } from "../GlobalStyles";
+} from "../components/ScreenSections";
+import { layout } from "../utils";
+import { globalStyles } from "../globalStyles";
 
 export const Home = () => {
   return (

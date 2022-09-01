@@ -1,9 +1,9 @@
 import { Image, StyleSheet, View } from "react-native";
 import React from "react";
 import { Text } from "../common/Text";
-import { layout } from "../../Utils";
-import Colors from "../../Constants/Colors";
-import { globalStyles } from "../../GlobalStyles";
+import { layout } from "../../utils";
+import Colors from "../../constants/Colors";
+import { globalStyles } from "../../globalStyles";
 import { Sizes } from "./Sizes";
 import { ClotheColor } from "./ClotheColor";
 import { Footer } from "./Footer";

@@ -1,9 +1,9 @@
 import { StyleSheet, View } from "react-native";
 import React from "react";
 import { Text } from "../common/Text";
-import { globalStyles } from "../../GlobalStyles";
-import { layout } from "../../Utils";
-import Colors from "../../Constants/Colors";
+import { globalStyles } from "../../globalStyles";
+import { layout } from "../../utils";
+import Colors from "../../constants/Colors";
 
 export const CommonSection = ({ leftText }) => {
   return (

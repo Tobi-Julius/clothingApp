@@ -1,9 +1,8 @@
-import { ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { layout } from "../../Utils";
-import Colors from "../../Constants/Colors";
+import { layout } from "../../utils";
+import Colors from "../../constants/Colors";
 import { Text } from "../common/Text";
-import { globalStyles } from "../../GlobalStyles";
 
 export const Sizes = () => {
   const [isItemId, setIsItemId] = React.useState("1");

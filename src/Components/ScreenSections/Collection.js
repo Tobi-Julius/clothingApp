@@ -6,8 +6,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import { layout } from "../../Utils";
-import { globalStyles } from "../../GlobalStyles";
+import { layout } from "../../utils";
+import { globalStyles } from "../../globalStyles";
 import { Text } from "../common/Text";
 import { BlurView } from "expo-blur";
 

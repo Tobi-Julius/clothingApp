@@ -6,14 +6,14 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import { Text } from "../Components/common/Text";
-import { Image } from "../Constants/Image";
-import { Icon } from "../Constants/Icon";
+import { Text } from "../components/common/Text";
+import { Image } from "../constants/Image";
+import { Icon } from "../constants/Icon";
 import { Ionicons } from "@expo/vector-icons";
-import { layout } from "../Utils";
+import { layout } from "../utils";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { globalStyles } from "../GlobalStyles";
-import Colors from "../Constants/Colors";
+import { globalStyles } from "../globalStyles";
+import Colors from "../constants/Colors";
 import { BlurView } from "expo-blur";
 import { useNavigation } from "@react-navigation/native";
 

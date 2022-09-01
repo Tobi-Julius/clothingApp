@@ -6,9 +6,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import { layout } from "../../Utils";
-import { globalStyles } from "../../GlobalStyles";
-import Colors from "../../Constants/Colors";
+import { layout } from "../../utils";
+import { globalStyles } from "../../globalStyles";
+import Colors from "../../constants/Colors";
 import { Text } from "../common/Text";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";

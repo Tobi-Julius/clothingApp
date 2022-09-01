@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { registerRootComponent } from "expo";
-import { useFonts } from "./Hooks/useFonts";
-import NavigationContainer from "./Navigation/NavigationContainer";
+import { useFonts } from "./hooks/useFonts";
+import NavigationContainer from "./navigation/NavigationContainer";
 
 function App() {
   const { isAppReady } = useFonts();

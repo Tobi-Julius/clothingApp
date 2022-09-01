@@ -1,7 +1,7 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { Like, Home, User, Cart } from "../Screens";
-import Colors from "../Constants/Colors";
+import { Like, Home, User, Cart } from "../screens";
+import Colors from "../constants/Colors";
 import { FontAwesome, Ionicons, Entypo, Feather } from "@expo/vector-icons";
 
 const Tabs = createMaterialBottomTabNavigator();

@@ -1,4 +1,4 @@
-const onboarding = require("../Assets/Image/onboarding.png");
+const onboarding = require("../assets/Image/onboarding.png");
 
 export const Image = {
   onboarding,
