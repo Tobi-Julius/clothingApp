@@ -7,19 +7,32 @@ import { globalStyles } from "../../globalStyles";
 import { Sizes } from "./Sizes";
 import { ClotheColor } from "./ClotheColor";
 import { Footer } from "./Footer";
+import { SharedElement } from "react-navigation-shared-element";
 
 export const ClotheBody = ({ item }) => {
-    
   const { id, uri, title, category, price } = item;
 
   return (
     <View style={styles.container}>
-      <View style={styles.textContainer}>
+      <SharedElement
+        id={`item.${(category, title)}.catTitle`}
+        style={styles.textContainer}
+      >
         <Text textStyle={styles.headerText} text={title} />
         <Text textStyle={styles.headerSubText} text={category} />
-      </View>
+      </SharedElement>
       <View style={[globalStyles.rowBetween, styles.imageSizeContainer]}>
-        <Image source={{ uri }} resizeMode="cover" style={styles.image} />
+        <SharedElement style={styles.image} id={`item.${item.uri}.imageUrl`}>
+          <Image
+            source={{ uri }}
+            resizeMode="cover"
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: layout.fontPixel(10),
+            }}
+          />
+        </SharedElement>
         <Sizes />
       </View>
       <ClotheColor id={id} price={price} />
@@ -52,8 +65,7 @@ const styles = StyleSheet.create({
     height: layout.heightPixel(400),
   },
   image: {
-    width: "78%",
+    width: "80%",
     height: "100%",
-    borderRadius: layout.fontPixel(7),
   },
 });

@@ -5,14 +5,15 @@ import { Ionicons } from "@expo/vector-icons";
 import { globalStyles } from "../../globalStyles";
 import { layout } from "../../utils";
 import Colors from "../../constants/Colors";
+import { SharedElement } from "react-native-shared-element";
 
 export const Footer = ({ price }) => {
   return (
     <View style={[styles.container, globalStyles.rowBetween]}>
-      <View>
+      <SharedElement id={`item.${price}.$price`}>
         <Text textStyle={styles.price} text="Price" />
         <Text textStyle={styles.price$} text={`$${price}`} />
-      </View>
+      </SharedElement>
 
       <TouchableOpacity>
         <TouchableOpacity
