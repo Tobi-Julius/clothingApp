@@ -3,6 +3,7 @@ import React from "react";
 import { layout } from "../../utils";
 import Colors from "../../constants/Colors";
 import { Text } from "../common/Text";
+import { Nunito_500Medium } from "@expo-google-fonts/nunito";
 
 export const Sizes = () => {
   const [isItemId, setIsItemId] = React.useState("1");
@@ -69,8 +70,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: Colors.lightColor,
-    fontSize: layout.size.h3,
-    fontFamily: "Nunito_700Bold",
+    fontSize: layout.size.h5,
+    fontFamily: "Nunito_500Medium",
+    fontWeight: "600",
     padding: layout.pixelSizeHorizontal(20),
     textAlign: "center",
     textAlignVertical: "center",

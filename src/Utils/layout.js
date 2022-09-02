@@ -1,11 +1,11 @@
 import { PixelRatio, Dimensions } from "react-native";
 
-const { height, width } = Dimensions.get("screen");
+const { height, width } = Dimensions.get("window");
 
 // base scale of w: 424 h: 942
 
 const widthBaseScale = width / 424;
-const heightBaseScale = height / 942;
+const heightBaseScale = height / 896;
 
 export const normalize = (size, based) => {
   const newSize =

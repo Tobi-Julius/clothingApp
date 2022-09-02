@@ -21,19 +21,26 @@ export const Onboarding = () => {
   const navigation = useNavigation();
 
   return (
-    <View>
+    <View style={[{ flex: 1 }]}>
       <ImageBackground
+        resizeMode="cover"
         source={Image.onboarding}
-        style={[styles.imageBackground, globalStyles.rowCenter]}
+        style={[globalStyles.rowCenter, { width: "100%", height: "100%" }]}
       >
         <SafeAreaView style={styles.areaView}>
-          <BlurView
-            intensity={150}
-            style={[globalStyles.rowCenter, styles.blurBackground]}
+          <View
+            style={{
+              height: layout.height * 0.45,
+            }}
           >
-            <Text textStyle={styles.topText} text="26 new arrivals" />
-            <IconImage source={Icon.fire} style={styles.fireIcon} />
-          </BlurView>
+            <BlurView
+              intensity={150}
+              style={[globalStyles.rowCenter, styles.blurBackground]}
+            >
+              <Text textStyle={styles.topText} text="26 new arrivals" />
+              <IconImage source={Icon.fire} style={styles.fireIcon} />
+            </BlurView>
+          </View>
 
           <View style={styles.bottomTextContainer}>
             <Text textStyle={styles.midText} text="With old new clothes" />
@@ -62,7 +69,7 @@ export const Onboarding = () => {
 
 const styles = StyleSheet.create({
   areaView: {
-    width: layout.width * 0.87356,
+    width: layout.width * 0.92,
     height: layout.height,
   },
   fireIcon: {
@@ -72,29 +79,22 @@ const styles = StyleSheet.create({
   },
   topText: {
     color: Colors.primaryBg,
-    fontSize: layout.size.h2,
+    fontSize: layout.size.h3,
     fontFamily: "Nunito_700Bold",
   },
   blurBackground: {
-    width: layout.widthPixel(210),
-    height: layout.heightPixel(65),
+    paddingVertical: layout.pixelSizeVertical(18),
+    maxWidth: layout.widthPixel(210),
     borderRadius: layout.fontPixel(10),
-    marginVertical: layout.pixelSizeVertical(36),
-  },
-  imageBackground: {
-    width: layout.width,
-    height: layout.height,
-    resizeMode: "contain",
+    marginVertical: layout.pixelSizeVertical(46),
   },
   bottomTextContainer: {
-    position: "absolute",
-    bottom: 0,
-    width: "100%",
-    height: layout.heightPixel(380),
+    height: layout.height * 0.5,
+    justifyContent: "flex-end",
   },
   midText: {
     fontFamily: "Nunito_700Bold",
-    fontSize: layout.fontPixel(55),
+    fontSize: layout.fontPixel(39),
     letterSpacing: 1,
     wordSpacing: 2,
     color: Colors.primaryBg,
@@ -102,13 +102,13 @@ const styles = StyleSheet.create({
   skipBtn: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginVertical: layout.pixelSizeVertical(80),
+    marginVertical: layout.pixelSizeVertical(50),
   },
   skipText: {
     color: Colors.primaryBg,
     fontFamily: "Nunito_700Bold",
     fontSize: layout.size.h2,
-    padding: layout.pixelSizeHorizontal(15),
+    // padding: layout.pixelSizeHorizontal(15),
   },
   btnText: {
     color: Colors.primaryBg,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   btn: {
     backgroundColor: Colors.secondaryColor,
     paddingVertical: layout.pixelSizeVertical(15),
-    paddingHorizontal: layout.pixelSizeHorizontal(25),
+    paddingHorizontal: layout.pixelSizeHorizontal(15),
     borderRadius: layout.fontPixel(15),
   },
   btnIcon: {

@@ -27,14 +27,32 @@ const RootNavigation = () => {
       <MainStack.Screen
         name="Clothe"
         component={Clothe}
-        sharedElements={(route) => {
-          const { id } = route.params;
+        sharedElements={(route, otherRoute, showing) => {
+          const { uri, price, category, title } = route.params;
           return [
             {
-              id: `item.${id}.image`,
-              animation: "fade-in",
-              resize: "clip",
-              align: "left-center",
+              // id: `item.${uri}.image`,
+              // animation: "fade-in",
+              // resize: "clip",
+              // align: "left-center",
+            },
+            {
+              // id: `item.${price}.price`,
+              // animation: "fade-in",
+              // resize: "clip",
+              // align: "left-center",
+            },
+            {
+              // id: `item.${category}.category`,
+              // animation: "fade-in",
+              // resize: "clip",
+              // align: "left-center",
+            },
+            {
+              // id: `item.${title}.title`,
+              // animation: "fade-in",
+              // resize: "clip",
+              // align: "left-center",
             },
           ];
         }}
@@ -42,7 +60,7 @@ const RootNavigation = () => {
           headerTransparent: true,
           backgroundColor: "red",
           headerShown: true,
-          
+          gestureEnabled: false,
           animation: "slide_from_right",
           animationDuration: 400,
           animationTypeForReplace: "push",

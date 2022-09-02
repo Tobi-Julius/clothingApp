@@ -79,16 +79,20 @@ export const Arrivals = () => {
               <View
                 style={[globalStyles.rowBetween, styles.iconPriceContainer]}
               >
-                <View>
-                  <Text textStyle={styles.title} text={item.title} />
-                  <Text textStyle={styles.price} text={`$${item.price}`} />
+                <View style={[globalStyles.rowBetween, { width: "100%" }]}>
+                  <View>
+                    <Text textStyle={styles.title} text={item.title} />
+                    <Text textStyle={styles.price} text={`$${item.price}`} />
+                  </View>
+                  <View>
+                    <AntDesign
+                      name="heart"
+                      style={styles.icon}
+                      size={20}
+                      color={Colors.primaryColorLight}
+                    />
+                  </View>
                 </View>
-                <AntDesign
-                  name="heart"
-                  style={styles.icon}
-                  size={20}
-                  color={Colors.primaryColorLight}
-                />
               </View>
             </TouchableOpacity>
           );
@@ -118,7 +122,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "Nunito_700Bold",
-    fontSize: layout.size.h3,
+    fontSize: layout.size.h5,
   },
   price: {
     fontFamily: "Nunito_600SemiBold",
