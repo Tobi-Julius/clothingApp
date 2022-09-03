@@ -31,28 +31,28 @@ const RootNavigation = () => {
           const { uri, price, category, title } = route.params;
           return [
             {
-              // id: `item.${uri}.image`,
-              // animation: "fade-in",
-              // resize: "clip",
-              // align: "left-center",
+              id: `item.${uri}.image`,
+              animation: "fade-in",
+              resize: "clip",
+              align: "left-center",
             },
             {
-              // id: `item.${price}.price`,
-              // animation: "fade-in",
-              // resize: "clip",
-              // align: "left-center",
+             id: `item.${price}.price`,
+             animation: "fade-in",
+             resize: "clip",
+             align: "left-center",
             },
             {
-              // id: `item.${category}.category`,
-              // animation: "fade-in",
-              // resize: "clip",
-              // align: "left-center",
+             id: `item.${category}.category`,
+             animation: "fade-in",
+             resize: "clip",
+             align: "left-center",
             },
             {
-              // id: `item.${title}.title`,
-              // animation: "fade-in",
-              // resize: "clip",
-              // align: "left-center",
+             id: `item.${title}.title`,
+             animation: "fade-in",
+             resize: "clip",
+             align: "left-center",
             },
           ];
         }}
